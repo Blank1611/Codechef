@@ -9,9 +9,15 @@ def const_mean(data_set):
     data = data_set.copy()
     org_mean = sum(data)/a
     data.sort()
-    for i in range(len(data)):
+    if len(data)%2 != 0:
+        if org_mean == ((sum(data)-data[(len(data)+1)/2])/(a-1)):
+            return (data_set.index(len(data)+1)/2)
+    else:
+        return None
+        
+    '''for i in range(len(data)):
         if org_mean == ((sum(data)-data[i])/(a-1)):
-            return (data_set.index(data[i])+1)
+            return (data_set.index(data[i])+1)'''
         
         
 for i in range(cases):
