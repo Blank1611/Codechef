@@ -4,10 +4,10 @@ Created on Fri Jul  5 21:21:13 2019
 
 @author: GRENTOR
 """
-import statistics
 cases = int(input())
-def const_mean(data):
-    org_mean = statistics.mean(data)
+def const_mean(data_set):
+    data = data_set.copy()
+    org_mean = sum(data)/a
     data.sort()
     for i in range(len(data)):
         if org_mean == ((sum(data)-data[i])/(a-1)):
